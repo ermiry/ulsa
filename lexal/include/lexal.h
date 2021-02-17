@@ -11,7 +11,7 @@
 
 #define ESPACIOS_POR_TAB						8
 
-#define AUTOMATA_ESTADOS_NUM					67
+#define AUTOMATA_ESTADOS_NUM					50
 #define AUTOAMATA_SIMBOLOS_ENTRADA_Y_CONTROL	86
 
 #define AUTOMATA_TIPO_NODO (AUTOAMATA_SIMBOLOS_ENTRADA_Y_CONTROL - 2)
@@ -45,18 +45,13 @@
 	XX(24,	Potencia, 				SIMBOLO_TERMINAL_POTENCIA)				\
 	XX(25,	NumEntero, 				SIMBOLO_TERMINAL_NUM_ENTERO)			\
 	XX(26,	NumReal, 				SIMBOLO_TERMINAL_NUM_REAL)				\
-	/* EXTRA */																\
 	XX(27,	PuntoYComa, 			SIMBOLO_TERMINAL_PuntoYComa	)			\
+	/* EXTRA */																\
 	XX(28,	Espacio, 				SIMBOLO_TERMINAL_Espacio)				\
 	XX(29,	Tabulador, 				SIMBOLO_TERMINAL_Tabulador)				\
 	XX(30,	SaltoDeLinea, 			SIMBOLO_TERMINAL_SaltoDeLinea)			\
-	XX(31,	FinDeArchivo, 			SIMBOLO_TERMINAL_FinDeArchivo)			\
-	XX(32,	Switch, 				SIMBOLO_TERMINAL_Switch)				\
-	XX(33,	Case, 					SIMBOLO_TERMINAL_Case)					\
-	XX(34,	Break, 					SIMBOLO_TERMINAL_Break)					\
-	XX(35,	DosPuntos, 				SIMBOLO_TERMINAL_DosPuntos)				\
 	/* ID */																\
-	XX(36,	ID, 					SIMBOLO_TERMINAL_ID)					\
+	XX(31,	ID, 					SIMBOLO_TERMINAL_ID)					\
 
 typedef enum SimboloTerminal {
 
