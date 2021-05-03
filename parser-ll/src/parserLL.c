@@ -310,63 +310,63 @@ case 1: //Regla 1) S → programa InstruccionCompuesta
 void imprime_regla(int intNumReglaObtenidaDeMR){
     switch (intNumReglaObtenidaDeMR)
     {
-        case 1:  printf(" \033[1;36m1.	S → programa InstruccionCompuesta \n"); break;
-        case 2:  printf("\033[1;36m 2.	InstruccionCompuesta → { BloqueInstruccion  }  \n"); break;
-        case 3:  printf("\033[1;36m 3.	BloqueInstruccion → Instrucción BloqueInstruccion2  \n"); break;
-        case 4:  printf("\033[1;36m 4.	BloqueInstruccion2 → ; Instrucción BloqueInstruccion2  \n");break;
-        case 5:  printf("\033[1;36m 5.	BloqueInstruccion2 → épsilon \n"); break;
-        case 6:  printf("\033[1;36m 6.	Instruccion → InstruccionAsignacion \n"); break;
-        case 7:  printf("\033[1;36m 7.	Instruccion → InstrucciónIf \n"); break;
-        case 8:  printf("\033[1;36m 8.	Instruccion → InstrucciónWhile \n"); break;
-        case 9:  printf("\033[1;36m 9. Instruccion → InstruccionImprime \n"); break;
-        case 10: printf("\033[1;36m 10.	Instruccion → InstrucciónCompuesta \n"); break;
-        case 11: printf("\033[1;36m 11. InstruccionAsigancion → ID = Expresion \n");  break;
-        case 12: printf("\033[1;36m 12. InstruccionIf → if (  Expresion ) Instruccion InstrucciónIf2\n");  break;
-        case 13: printf("\033[1;36m 13. InstruccionIf2 → else Instrucción\n"); break;
-        case 14: printf("\033[1;36m 14. InstruccionIf2 → epsilon\n"); break;
-        case 15: printf("\033[1;36m 15. InstruccionWhile → while {Expresion} Instruccion\n"); break;
-        case 16: printf("\033[1;36m 16. InstrucciónImprime → ? Expresion\n");  break;
-        case 17: printf("\033[1;36m 17. Expresion → ExpRelacional Expresion2\n"); break;
-        case 18: printf("\033[1;36m 18. Expresion2 → OpLogico ExpRelacional  \n");  break;
-        case 19: printf("\033[1;36m 19. Expresion2 → épsilon  \n"); break;
-        case 20: printf("\033[1;36m 20. ExpRelacional → ExpCompuesta ExpRelacional2\n"); break;
-        case 21: printf("\033[1;36m 21. ExpRelacional2 → OpRelacional ExpCompuesta  \n"); break;
-        case 22: printf("\033[1;36m 22. ExpRelacional2 → épsilon\n");  break;
-        case 23: printf("\033[1;36m 23. ExpCompuesta → ExpSimple ExpCompuesta2\n");  break;
-        case 24: printf("\033[1;36m 24. ExpCompuesta2 → OpAditivo ExpSimple\n");  break;
-        case 25: printf("\033[1;36m 25. ExpCompuesta2 → épsilon\n"); break;
-        case 26: printf("\033[1;36m 26. ExpSimple → Factor ExpSimple2\n");  break;
-        case 27: printf("\033[1;36m 27. ExpSimple2 → OpMultiplicativo Factor \n"); break;
-        case 28: printf("\033[1;36m 28. ExpSimple2 → epsilon \n");  break;
-        case 29: printf("\033[1;36m 29. Factor → Termino Factor2 \n");  break;
-        case 30: printf("\033[1;36m 30. Factor2 → OpPon termino \n");  break;
-        case 31: printf("\033[1;36m 31. Factor2 → epsilon \n"); break;
-        case 32: printf("\033[1;32m 32. Termino → Numero \n");  break;
-        case 33: printf("\033[1;36m 33. Termino → ID \n");  break;
-        case 34: printf("\033[1;36m 34. Termino →  ( Expresion ) \n");  break;
-        case 35: printf("\033[1;36m 35. Termino → ! \n");  break;
-        case 36: printf("\033[1;36m 36. OpAditivo → + \n");  break;
-        case 37: printf("\033[1;36m 37. OpAditivo → - \n"); break;
-        case 38: printf("\033[1;36m 38. OpMultiplicativo → * \n");  break;
-        case 39: printf("\033[1;36m 39. OpMultiplicativo → / \n"); break;
-        case 40: printf("\033[1;36m 40. OpRelacional → >  \n"); break;
-        case 41: printf("\033[1;36m 41. OpRelacional → <  \n"); break;
-        case 42: printf("\033[1;36m 42. OpRelacional → >=  \n"); break;
-        case 43: printf("\033[1;36m 43. OpRelacional → <=  \n"); break;
-        case 44: printf("\033[1;36m 44. OpRelacional → ==  \n"); break;
-        case 45: printf("\033[1;36m 45. OpRelacional → !=  \n"); break;
-        case 46: printf("\033[1;36m 46. OpLogico → AND  \n"); break;
-        case 47: printf("\033[1;36m 47. OpLogico → OR \n"); break;
-        case 48: printf("\033[1;36m 48. OpPon → ^  \n");  break;
-        case 49: printf("\033[1;36m 49. Numero → NumeroEntero  \n"); break;
-        case 50: printf("\033[1;36m 50. Numero → NumeroReal  \n"); break;
-        case 51: printf("\033[1;36m 51. Instruccion → InstruccionSelect \n"); break;
-        case 52: printf("\033[1;36m 52. InstruccionSelect → Select InstruccionId InstruccionFrom \n"); break;
-        case 53: printf("\033[1;36m 53. InstruccionFrom → From ID InstruccionWhere \n"); break;
-        case 54: printf("\033[1;36m 54. InstruccionWhere → Where InstrAsignacion ; \n"); break;
-        case 55: printf("\033[1;36m 55. InstruccionId → ID InstruccionId2 \n"); break;
-        case 56: printf("\033[1;36m 56. InstruccionId2 → , ID InstruccionID2  \n"); break;
-        case 57: printf("\033[1;36m 57. InstruccionID2 → epsilon \n"); break;
+        case 1:  (void) printf (LOG_COLOR_BLUE "1. S → programa InstruccionCompuesta \n"); break;
+        case 2:  (void) printf (LOG_COLOR_BLUE "2. InstruccionCompuesta → { BloqueInstruccion  }  \n"); break;
+        case 3:  (void) printf (LOG_COLOR_BLUE "3. BloqueInstruccion → Instrucción BloqueInstruccion2  \n"); break;
+        case 4:  (void) printf (LOG_COLOR_BLUE "4. BloqueInstruccion2 → ; Instrucción BloqueInstruccion2  \n");break;
+        case 5:  (void) printf (LOG_COLOR_BLUE "5. BloqueInstruccion2 → epsilon \n"); break;
+        case 6:  (void) printf (LOG_COLOR_BLUE "6. Instruccion → InstruccionAsignacion \n"); break;
+        case 7:  (void) printf (LOG_COLOR_BLUE "7. Instruccion → InstrucciónIf \n"); break;
+        case 8:  (void) printf (LOG_COLOR_BLUE "8. Instruccion → InstrucciónWhile \n"); break;
+        case 9:  (void) printf (LOG_COLOR_BLUE "9. Instruccion → InstruccionImprime \n"); break;
+        case 10: (void) printf (LOG_COLOR_BLUE "10. Instruccion → InstrucciónCompuesta \n"); break;
+        case 11: (void) printf (LOG_COLOR_BLUE "11. InstruccionAsigancion → ID = Expresion \n");  break;
+        case 12: (void) printf (LOG_COLOR_BLUE "12. InstruccionIf → if (  Expresion ) Instruccion InstrucciónIf2\n");  break;
+        case 13: (void) printf (LOG_COLOR_BLUE "13. InstruccionIf2 → else Instrucción\n"); break;
+        case 14: (void) printf (LOG_COLOR_BLUE "14. InstruccionIf2 → epsilon\n"); break;
+        case 15: (void) printf (LOG_COLOR_BLUE "15. InstruccionWhile → while {Expresion} Instruccion\n"); break;
+        case 16: (void) printf (LOG_COLOR_BLUE "16. InstrucciónImprime → ? Expresion\n");  break;
+        case 17: (void) printf (LOG_COLOR_BLUE "17. Expresion → ExpRelacional Expresion2\n"); break;
+        case 18: (void) printf (LOG_COLOR_BLUE "18. Expresion2 → OpLogico ExpRelacional  \n");  break;
+        case 19: (void) printf (LOG_COLOR_BLUE "19. Expresion2 → epsilon  \n"); break;
+        case 20: (void) printf (LOG_COLOR_BLUE "20. ExpRelacional → ExpCompuesta ExpRelacional2\n"); break;
+        case 21: (void) printf (LOG_COLOR_BLUE "21. ExpRelacional2 → OpRelacional ExpCompuesta  \n"); break;
+        case 22: (void) printf (LOG_COLOR_BLUE "22. ExpRelacional2 → épsilon\n");  break;
+        case 23: (void) printf (LOG_COLOR_BLUE "23. ExpCompuesta → ExpSimple ExpCompuesta2\n");  break;
+        case 24: (void) printf (LOG_COLOR_BLUE "24. ExpCompuesta2 → OpAditivo ExpSimple\n");  break;
+        case 25: (void) printf (LOG_COLOR_BLUE "25. ExpCompuesta2 → épsilon\n"); break;
+        case 26: (void) printf (LOG_COLOR_BLUE "26. ExpSimple → Factor ExpSimple2\n");  break;
+        case 27: (void) printf (LOG_COLOR_BLUE "27. ExpSimple2 → OpMultiplicativo Factor \n"); break;
+        case 28: (void) printf (LOG_COLOR_BLUE "28. ExpSimple2 → epsilon \n");  break;
+        case 29: (void) printf (LOG_COLOR_BLUE "29. Factor → Termino Factor2 \n");  break;
+        case 30: (void) printf (LOG_COLOR_BLUE "30. Factor2 → OpPon termino \n");  break;
+        case 31: (void) printf (LOG_COLOR_BLUE "31. Factor2 → epsilon \n"); break;
+        case 32: (void) printf (LOG_COLOR_BLUE "32. Termino → Numero \n");  break;
+        case 33: (void) printf (LOG_COLOR_BLUE "33. Termino → ID \n");  break;
+        case 34: (void) printf (LOG_COLOR_BLUE "34. Termino →  ( Expresion ) \n");  break;
+        case 35: (void) printf (LOG_COLOR_BLUE "35. Termino → ! \n");  break;
+        case 36: (void) printf (LOG_COLOR_BLUE "36. OpAditivo → + \n");  break;
+        case 37: (void) printf (LOG_COLOR_BLUE "37. OpAditivo → - \n"); break;
+        case 38: (void) printf (LOG_COLOR_BLUE "38. OpMultiplicativo → * \n");  break;
+        case 39: (void) printf (LOG_COLOR_BLUE "39. OpMultiplicativo → / \n"); break;
+        case 40: (void) printf (LOG_COLOR_BLUE "40. OpRelacional → >  \n"); break;
+        case 41: (void) printf (LOG_COLOR_BLUE "41. OpRelacional → <  \n"); break;
+        case 42: (void) printf (LOG_COLOR_BLUE "42. OpRelacional → >=  \n"); break;
+        case 43: (void) printf (LOG_COLOR_BLUE "43. OpRelacional → <=  \n"); break;
+        case 44: (void) printf (LOG_COLOR_BLUE "44. OpRelacional → ==  \n"); break;
+        case 45: (void) printf (LOG_COLOR_BLUE "45. OpRelacional → !=  \n"); break;
+        case 46: (void) printf (LOG_COLOR_BLUE "46. OpLogico → AND  \n"); break;
+        case 47: (void) printf (LOG_COLOR_BLUE "47. OpLogico → OR \n"); break;
+        case 48: (void) printf (LOG_COLOR_BLUE "48. OpPon → ^  \n");  break;
+        case 49: (void) printf (LOG_COLOR_BLUE "49. Numero → NumeroEntero  \n"); break;
+        case 50: (void) printf (LOG_COLOR_BLUE "50. Numero → NumeroReal  \n"); break;
+        case 51: (void) printf (LOG_COLOR_BLUE "51. Instruccion → InstruccionSelect \n"); break;
+        case 52: (void) printf (LOG_COLOR_BLUE "52. InstruccionSelect → Select InstruccionId InstruccionFrom \n"); break;
+        case 53: (void) printf (LOG_COLOR_BLUE "53. InstruccionFrom → From ID InstruccionWhere \n"); break;
+        case 54: (void) printf (LOG_COLOR_BLUE "54. InstruccionWhere → Where InstrAsignacion ; \n"); break;
+        case 55: (void) printf (LOG_COLOR_BLUE "55. InstruccionId → ID InstruccionId2 \n"); break;
+        case 56: (void) printf (LOG_COLOR_BLUE "56. InstruccionId2 → , ID InstruccionID2  \n"); break;
+        case 57: (void) printf (LOG_COLOR_BLUE "57. InstruccionID2 → epsilon \n"); break;
         
         default: break ;    
     }
@@ -378,9 +378,9 @@ int ParserLL_AplicaRegla(){
     
     intNumReglaObtenidaDeMR= MR[ptrStackTop->intSimboloCodigo - 1][ptrCurrentToken->intTokenCodigo - 1];
     // intNumReglaObtenidaDeMR= 1;
-    printf("//DEBUG: %d\n",intNumReglaObtenidaDeMR );
-    printf("//DEBUG: ptrStackTop->intSimboloTipo %d\n",ptrStackTop->intSimboloTipo );
-    printf("//DEBUG: ptrCurrentToken->intTokenCodigo %d\n",ptrCurrentToken->intTokenCodigo );
+    // printf("//DEBUG: %d\n",intNumReglaObtenidaDeMR );
+    // printf("//DEBUG: ptrStackTop->intSimboloTipo %d\n",ptrStackTop->intSimboloTipo );
+    // printf("//DEBUG: ptrCurrentToken->intTokenCodigo %d\n",ptrCurrentToken->intTokenCodigo );
 
     if (intNumReglaObtenidaDeMR>0)
     {
@@ -388,7 +388,7 @@ int ParserLL_AplicaRegla(){
         SustituyeNTenStackPorParteDerehcaDeLaRegla(intNumReglaObtenidaDeMR);
     }
     else{
-        printf("//DEBUG: ParserLL_AplicaRegla(TRUE)\n");
+        // printf("//DEBUG: ParserLL_AplicaRegla(TRUE)\n");
         return TRUE;
     }
     return FALSE;
@@ -405,42 +405,42 @@ int stack_top_es_NT(){
 void imprimeT(int intSimboloCodigo){
     switch (intSimboloCodigo)
     {
-        case SIMBOLO_TERMINAL_ID             : printf("\033[0;36m SIMBOLO_TERMINAL_ID              \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_programa       : printf("\033[0;36m SIMBOLO_TERMINAL_programa        \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_LLAVE_A        : printf("\033[0;36m SIMBOLO_TERMINAL_LLAVE_A         \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_LLAVE_C        : printf("\033[0;36m SIMBOLO_TERMINAL_LLAVE_C         \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_PARENTESIS_A   : printf("\033[0;36m SIMBOLO_TERMINAL_PARENTESIS_A    \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_PARENTESIS_C   : printf("\033[0;36m SIMBOLO_TERMINAL_PARENTESIS_C    \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_if             : printf("\033[0;36m SIMBOLO_TERMINAL_if              \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_PuntoYComa     : printf("\033[0;36m SIMBOLO_TERMINAL_PuntoYComa      \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_IGUAL          : printf("\033[0;36m SIMBOLO_TERMINAL_IGUAL           \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_else           : printf("\033[0;36m SIMBOLO_TERMINAL_else            \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_while          : printf("\033[0;36m SIMBOLO_TERMINAL_while           \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_INTERROGACION  : printf("\033[0;36m SIMBOLO_TERMINAL_INTERROGACION   \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_MAS            : printf("\033[0;36m SIMBOLO_TERMINAL_MAS             \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_MENOS          : printf("\033[0;36m SIMBOLO_TERMINAL_MENOS           \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_POR            : printf("\033[0;36m SIMBOLO_TERMINAL_POR             \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_MAYORQUE       : printf("\033[0;36m SIMBOLO_TERMINAL_MAYORQUE        \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_MAYOROIGUAL    : printf("\033[0;36m SIMBOLO_TERMINAL_MAYOROIGUAL     \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_MENORQUE       : printf("\033[0;36m SIMBOLO_TERMINAL_MENORQUE        \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_MENOROIGUAL    : printf("\033[0;36m SIMBOLO_TERMINAL_MENOROIGUAL     \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_IGUALDAD       : printf("\033[0;36m SIMBOLO_TERMINAL_IGUALDAD        \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_DESIGUAL       : printf("\033[0;36m SIMBOLO_TERMINAL_DESIGUAL        \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_AND            : printf("\033[0;36m SIMBOLO_TERMINAL_AND             \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_OR             : printf("\033[0;36m SIMBOLO_TERMINAL_OR              \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_NUMERO_ENTERO  : printf("\033[0;36m SIMBOLO_TERMINAL_NUMERO_ENTERO   \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_NUMERO_REAL    : printf("\033[0;36m SIMBOLO_TERMINAL_NUMERO_REAL     \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_Espacio        : printf("\033[0;36m SIMBOLO_TERMINAL_Espacio         \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_Tabulador      : printf("\033[0;36m SIMBOLO_TERMINAL_Tabulador       \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_SaltoDeLinea   : printf("\033[0;36m SIMBOLO_TERMINAL_SaltoDeLinea    \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_FinalDeArchivo : printf("\033[0;36m SIMBOLO_TERMINAL_FinalDeArchivo  \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_NEGACION       : printf("\033[0;36m SIMBOLO_TERMINAL_NEGACION        \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_DIVISION       : printf("\033[0;36m SIMBOLO_TERMINAL_DIVISION        \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_SELECT         : printf("\033[0;36m SIMBOLO_TERMINAL_SELECT          \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_FROM           : printf("\033[0;36m SIMBOLO_TERMINAL_FROM            \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_WHERE          : printf("\033[0;36m SIMBOLO_TERMINAL_WHERE           \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_COMA           : printf("\033[0;36m SIMBOLO_TERMINAL_COMA            \n \033[0m"); break;
-        case SIMBOLO_TERMINAL_POTENCIA       : printf("\033[0;36m SIMBOLO_TERMINAL_POTENCIA        \n \033[0m"); break;
+        case SIMBOLO_TERMINAL_ID             : printf("SIMBOLO_TERMINAL_ID              \n"); break;
+        case SIMBOLO_TERMINAL_programa       : printf("SIMBOLO_TERMINAL_programa        \n"); break;
+        case SIMBOLO_TERMINAL_LLAVE_A        : printf("SIMBOLO_TERMINAL_LLAVE_A         \n"); break;
+        case SIMBOLO_TERMINAL_LLAVE_C        : printf("SIMBOLO_TERMINAL_LLAVE_C         \n"); break;
+        case SIMBOLO_TERMINAL_PARENTESIS_A   : printf("SIMBOLO_TERMINAL_PARENTESIS_A    \n"); break;
+        case SIMBOLO_TERMINAL_PARENTESIS_C   : printf("SIMBOLO_TERMINAL_PARENTESIS_C    \n"); break;
+        case SIMBOLO_TERMINAL_if             : printf("SIMBOLO_TERMINAL_if              \n"); break;
+        case SIMBOLO_TERMINAL_PuntoYComa     : printf("SIMBOLO_TERMINAL_PuntoYComa      \n"); break;
+        case SIMBOLO_TERMINAL_IGUAL          : printf("SIMBOLO_TERMINAL_IGUAL           \n"); break;
+        case SIMBOLO_TERMINAL_else           : printf("SIMBOLO_TERMINAL_else            \n"); break;
+        case SIMBOLO_TERMINAL_while          : printf("SIMBOLO_TERMINAL_while           \n"); break;
+        case SIMBOLO_TERMINAL_INTERROGACION  : printf("SIMBOLO_TERMINAL_INTERROGACION   \n"); break;
+        case SIMBOLO_TERMINAL_MAS            : printf("SIMBOLO_TERMINAL_MAS             \n"); break;
+        case SIMBOLO_TERMINAL_MENOS          : printf("SIMBOLO_TERMINAL_MENOS           \n"); break;
+        case SIMBOLO_TERMINAL_POR            : printf("SIMBOLO_TERMINAL_POR             \n"); break;
+        case SIMBOLO_TERMINAL_MAYORQUE       : printf("SIMBOLO_TERMINAL_MAYORQUE        \n"); break;
+        case SIMBOLO_TERMINAL_MAYOROIGUAL    : printf("SIMBOLO_TERMINAL_MAYOROIGUAL     \n"); break;
+        case SIMBOLO_TERMINAL_MENORQUE       : printf("SIMBOLO_TERMINAL_MENORQUE        \n"); break;
+        case SIMBOLO_TERMINAL_MENOROIGUAL    : printf("SIMBOLO_TERMINAL_MENOROIGUAL     \n"); break;
+        case SIMBOLO_TERMINAL_IGUALDAD       : printf("SIMBOLO_TERMINAL_IGUALDAD        \n"); break;
+        case SIMBOLO_TERMINAL_DESIGUAL       : printf("SIMBOLO_TERMINAL_DESIGUAL        \n"); break;
+        case SIMBOLO_TERMINAL_AND            : printf("SIMBOLO_TERMINAL_AND             \n"); break;
+        case SIMBOLO_TERMINAL_OR             : printf("SIMBOLO_TERMINAL_OR              \n"); break;
+        case SIMBOLO_TERMINAL_NUMERO_ENTERO  : printf("SIMBOLO_TERMINAL_NUMERO_ENTERO   \n"); break;
+        case SIMBOLO_TERMINAL_NUMERO_REAL    : printf("SIMBOLO_TERMINAL_NUMERO_REAL     \n"); break;
+        case SIMBOLO_TERMINAL_Espacio        : printf("SIMBOLO_TERMINAL_Espacio         \n"); break;
+        case SIMBOLO_TERMINAL_Tabulador      : printf("SIMBOLO_TERMINAL_Tabulador       \n"); break;
+        case SIMBOLO_TERMINAL_SaltoDeLinea   : printf("SIMBOLO_TERMINAL_SaltoDeLinea    \n"); break;
+        case SIMBOLO_TERMINAL_FinalDeArchivo : printf("SIMBOLO_TERMINAL_FinalDeArchivo  \n"); break;
+        case SIMBOLO_TERMINAL_NEGACION       : printf("SIMBOLO_TERMINAL_NEGACION        \n"); break;
+        case SIMBOLO_TERMINAL_DIVISION       : printf("SIMBOLO_TERMINAL_DIVISION        \n"); break;
+        case SIMBOLO_TERMINAL_SELECT         : printf("SIMBOLO_TERMINAL_SELECT          \n"); break;
+        case SIMBOLO_TERMINAL_FROM           : printf("SIMBOLO_TERMINAL_FROM            \n"); break;
+        case SIMBOLO_TERMINAL_WHERE          : printf("SIMBOLO_TERMINAL_WHERE           \n"); break;
+        case SIMBOLO_TERMINAL_COMA           : printf("SIMBOLO_TERMINAL_COMA            \n"); break;
+        case SIMBOLO_TERMINAL_POTENCIA       : printf("SIMBOLO_TERMINAL_POTENCIA        \n"); break;
         default: printf("ERROR"); break;
     }
 }
@@ -448,36 +448,36 @@ void imprimeT(int intSimboloCodigo){
 void imprimeNT(int intSimboloCodigo){
     switch (intSimboloCodigo)
     {
-        case SIMBOLO_NO_TERMINAL_S                       : printf("\033[1;36m SIMBOLO_NO_TERMINAL_S                     \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_InstruccionCompuesta    : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionCompuesta  \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_BloqueInstruccion       : printf("\033[1;36m SIMBOLO_NO_TERMINAL_BloqueInstruccion     \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_BloqueInstruccion2      : printf("\033[1;36m SIMBOLO_NO_TERMINAL_BloqueInstruccion2    \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_Instruccion             : printf("\033[1;36m SIMBOLO_NO_TERMINAL_Instruccion           \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_InstruccionAsigancion   : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionAsigancion \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_InstruccionIf           : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionIf         \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_InstruccionIf2          : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionIf2        \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_InstruccionWhile        : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionWhile      \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_InstruccionImprime      : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionImprime    \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_Expresion               : printf("\033[1;36m SIMBOLO_NO_TERMINAL_Expresion             \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_Expresion2              : printf("\033[1;36m SIMBOLO_NO_TERMINAL_Expresion2            \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_ExpRelacional           : printf("\033[1;36m SIMBOLO_NO_TERMINAL_ExpRelacional         \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_ExpRelacional2          : printf("\033[1;36m SIMBOLO_NO_TERMINAL_ExpRelacional2        \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_ExpCompuesta            : printf("\033[1;36m SIMBOLO_NO_TERMINAL_ExpCompuesta          \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_ExpCompuesta2           : printf("\033[1;36m SIMBOLO_NO_TERMINAL_ExpCompuesta2         \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_ExpSimple               : printf("\033[1;36m SIMBOLO_NO_TERMINAL_ExpSimple             \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_ExpSimple2              : printf("\033[1;36m SIMBOLO_NO_TERMINAL_ExpSimple2            \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_Factor                  : printf("\033[1;36m SIMBOLO_NO_TERMINAL_Factor                \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_Factor2                 : printf("\033[1;36m SIMBOLO_NO_TERMINAL_Factor2               \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_Termino                 : printf("\033[1;36m SIMBOLO_NO_TERMINAL_Termino               \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_OpAditivo               : printf("\033[1;36m SIMBOLO_NO_TERMINAL_OpAditivo             \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_OpMultiplicativo        : printf("\033[1;36m SIMBOLO_NO_TERMINAL_OpMultiplicativo      \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_OpRelacional            : printf("\033[1;36m SIMBOLO_NO_TERMINAL_OpRelacional          \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_OpLogico                : printf("\033[1;36m SIMBOLO_NO_TERMINAL_OpLogico              \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_OpPon                   : printf("\033[1;36m SIMBOLO_NO_TERMINAL_OpPon                 \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_Numero                  : printf("\033[1;36m SIMBOLO_NO_TERMINAL_Numero                \n \033[0m"); break;
+        case SIMBOLO_NO_TERMINAL_S                       : printf("SIMBOLO_NO_TERMINAL_S                     \n"); break;
+        case SIMBOLO_NO_TERMINAL_InstruccionCompuesta    : printf("SIMBOLO_NO_TERMINAL_InstruccionCompuesta  \n"); break;
+        case SIMBOLO_NO_TERMINAL_BloqueInstruccion       : printf("SIMBOLO_NO_TERMINAL_BloqueInstruccion     \n"); break;
+        case SIMBOLO_NO_TERMINAL_BloqueInstruccion2      : printf("SIMBOLO_NO_TERMINAL_BloqueInstruccion2    \n"); break;
+        case SIMBOLO_NO_TERMINAL_Instruccion             : printf("SIMBOLO_NO_TERMINAL_Instruccion           \n"); break;
+        case SIMBOLO_NO_TERMINAL_InstruccionAsigancion   : printf("SIMBOLO_NO_TERMINAL_InstruccionAsigancion \n"); break;
+        case SIMBOLO_NO_TERMINAL_InstruccionIf           : printf("SIMBOLO_NO_TERMINAL_InstruccionIf         \n"); break;
+        case SIMBOLO_NO_TERMINAL_InstruccionIf2          : printf("SIMBOLO_NO_TERMINAL_InstruccionIf2        \n"); break;
+        case SIMBOLO_NO_TERMINAL_InstruccionWhile        : printf("SIMBOLO_NO_TERMINAL_InstruccionWhile      \n"); break;
+        case SIMBOLO_NO_TERMINAL_InstruccionImprime      : printf("SIMBOLO_NO_TERMINAL_InstruccionImprime    \n"); break;
+        case SIMBOLO_NO_TERMINAL_Expresion               : printf("SIMBOLO_NO_TERMINAL_Expresion             \n"); break;
+        case SIMBOLO_NO_TERMINAL_Expresion2              : printf("SIMBOLO_NO_TERMINAL_Expresion2            \n"); break;
+        case SIMBOLO_NO_TERMINAL_ExpRelacional           : printf("SIMBOLO_NO_TERMINAL_ExpRelacional         \n"); break;
+        case SIMBOLO_NO_TERMINAL_ExpRelacional2          : printf("SIMBOLO_NO_TERMINAL_ExpRelacional2        \n"); break;
+        case SIMBOLO_NO_TERMINAL_ExpCompuesta            : printf("SIMBOLO_NO_TERMINAL_ExpCompuesta          \n"); break;
+        case SIMBOLO_NO_TERMINAL_ExpCompuesta2           : printf("SIMBOLO_NO_TERMINAL_ExpCompuesta2         \n"); break;
+        case SIMBOLO_NO_TERMINAL_ExpSimple               : printf("SIMBOLO_NO_TERMINAL_ExpSimple             \n"); break;
+        case SIMBOLO_NO_TERMINAL_ExpSimple2              : printf("SIMBOLO_NO_TERMINAL_ExpSimple2            \n"); break;
+        case SIMBOLO_NO_TERMINAL_Factor                  : printf("SIMBOLO_NO_TERMINAL_Factor                \n"); break;
+        case SIMBOLO_NO_TERMINAL_Factor2                 : printf("SIMBOLO_NO_TERMINAL_Factor2               \n"); break;
+        case SIMBOLO_NO_TERMINAL_Termino                 : printf("SIMBOLO_NO_TERMINAL_Termino               \n"); break;
+        case SIMBOLO_NO_TERMINAL_OpAditivo               : printf("SIMBOLO_NO_TERMINAL_OpAditivo             \n"); break;
+        case SIMBOLO_NO_TERMINAL_OpMultiplicativo        : printf("SIMBOLO_NO_TERMINAL_OpMultiplicativo      \n"); break;
+        case SIMBOLO_NO_TERMINAL_OpRelacional            : printf("SIMBOLO_NO_TERMINAL_OpRelacional          \n"); break;
+        case SIMBOLO_NO_TERMINAL_OpLogico                : printf("SIMBOLO_NO_TERMINAL_OpLogico              \n"); break;
+        case SIMBOLO_NO_TERMINAL_OpPon                   : printf("SIMBOLO_NO_TERMINAL_OpPon                 \n"); break;
+        case SIMBOLO_NO_TERMINAL_Numero                  : printf("SIMBOLO_NO_TERMINAL_Numero                \n"); break;
        
-        case SIMBOLO_NO_TERMINAL_InstruccionIDs          : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionIDs      \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_InstruccionIDs2          : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionIDs2      \n \033[0m"); break;
+        case SIMBOLO_NO_TERMINAL_InstruccionIDs          : printf("SIMBOLO_NO_TERMINAL_InstruccionIDs        \n"); break;
+        case SIMBOLO_NO_TERMINAL_InstruccionIDs2         : printf("SIMBOLO_NO_TERMINAL_InstruccionIDs2       \n"); break;
         default: printf("Error"); break;
     }
 }
@@ -525,10 +525,10 @@ void push(int intSimboloTipo, int intSimboloCodigo){
     }
 }
 
-void stack_imprime2(t_stack *nodoStack){
+void stack_imprime_internal(t_stack *nodoStack){
     if (nodoStack)
     {
-        stack_imprime2(nodoStack->ptrSig);
+        stack_imprime_internal(nodoStack->ptrSig);
         switch (nodoStack->intSimboloTipo)
         {
             case TIPO_SIMBOLO_NO_TERMINAL:
@@ -546,30 +546,34 @@ void stack_imprime2(t_stack *nodoStack){
 }
 
 void stack_imprime(){
-    printf("Stack: \n");
-    stack_imprime2(ptrStackTop);
+    (void) printf (LOG_COLOR_GREEN "Stack: \n" LOG_COLOR_RESET);
+    stack_imprime_internal(ptrStackTop);
     printf("\n");
 }
 
 void entrada_imprime(){
     t_token *aux = ptrCurrentToken;
 
-    printf("Entrada: \n");
+    (void) printf (LOG_COLOR_GREEN "Entrada: \n" LOG_COLOR_RESET);
     while (aux) 
     {
         imprimeT(aux->intTokenCodigo);
-        printf(" ");
+        // printf(" ");
         aux = aux->ptrSig;
     }
     // printf("|");
     
 }
 
-void printError(){
-    printf("\033[1;31m \t\tError Sintactico=%s, Renglon=%d, Columna=%d\n",
-                 ptrCurrentToken->strTokenTextoFuente, 
-                 ptrCurrentToken->intRenglon, 
-                 ptrCurrentToken->intColumna);
+void printError (void) {
+
+    (void) printf (
+        "\033[1;31m \t\tError Sintactico=%s, Renglon=%d, Columna=%d\n",
+        ptrCurrentToken->strTokenTextoFuente, 
+        ptrCurrentToken->intRenglon, 
+        ptrCurrentToken->intColumna
+    );
+
 }
 
 void parser_LL(){
@@ -607,7 +611,7 @@ void parser_LL(){
                     }
                     else
                     {
-                        printf("\nExpect \n");
+                        // printf("\nExpect \n");
                         pop();
                         ptrCurrentToken = ptrCurrentToken->ptrSig;
                     }

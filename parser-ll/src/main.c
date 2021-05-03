@@ -3,27 +3,28 @@
 
 #include "scanner.h"
 
-void parser_LL();
+int main (int argc, const char **argv) {
 
-int main()
-{
-    printf("\n\n\n");
-    printf("\t\t \033[1;35m ┌────────────────────────┐\n");
-    printf("\t\t \033[1;35m │         SCANNER        │\n");
-    printf("\t\t \033[1;35m └────────────────────────┘\n\n");
+	if (argc > 1) {
+		(void) printf ("==============================");
+		(void) printf ("\n SCANNER \n\n");
+		(void) printf ("==============================");
+		scanner (argv[1]);
+		
+		ListaTokens_Imprime ();
 
-    scanner("./data/fuente.txt");
-    ListaTokens_Imprime();
+		(void) printf ("==============================");
+		(void) printf ("\n\n PARSER \n\n");
+		(void) printf ("==============================");
+		parser_LL ();
 
-    printf("\n\n\n");
-    printf("\t\t \033[1;35m ┌────────────────────────┐\n");
-    printf("\t\t \033[1;35m │         PARSER         │\n");
-    printf("\t\t \033[1;35m └────────────────────────┘\n\n");
-    parser_LL();
+		ListaTokens_Libera ();
+	}
 
-    ListaTokens_Libera();
-    //ImprimirListaToken();
-    //LiberarListaToken();
+	else {
+		(void) printf ("Missing input file!\n\n");
+	}
 
-    return 0;
-}//main
+	return 0;
+
+}

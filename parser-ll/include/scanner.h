@@ -1,6 +1,14 @@
 #ifndef _SCANNER_H_
 #define _SCANNER_H_
 
+#define LOG_COLOR_RED       "\x1b[31m"
+#define LOG_COLOR_GREEN     "\x1b[32m"
+#define LOG_COLOR_YELLOW    "\x1b[33m"
+#define LOG_COLOR_BLUE      "\x1b[34m"
+#define LOG_COLOR_MAGENTA   "\x1b[35m"
+#define LOG_COLOR_CYAN      "\x1b[36m"
+#define LOG_COLOR_RESET     "\x1b[0m"
+
 #define TIPO_NODO_Inicial 0
 #define TIPO_NODO_Intermedio 1
 #define TIPO_NODO_IntermedioFinal 2
@@ -66,6 +74,7 @@ typedef struct t_token t_token;
 extern int scanner(const char *strArchivoNombre);
 extern void ListaTokens_Libera(void);
 extern void ListaTokens_Imprime(void);
+extern void parser_LL(void);
 
 #endif
 
