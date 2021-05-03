@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include "../include/scanner.h"
 
+#include "scanner.h"
 
 #define AUTOMATA_ESTADOS_NUM 67
 #define AUTOMATA_SIMBOLOS_ENTRADA_Y_CONTROL 85
@@ -286,12 +286,7 @@ char *ObtenerEtiquetaDelSimboloTermina(int intCodigoSimboloTerminal)
             strcpy(strTokenSimboloTerminal,"SIMBOLO_TERMINAL_NEGACION"); break;
         case SIMBOLO_TERMINAL_DIVISION:
             strcpy(strTokenSimboloTerminal,"SIMBOLO_TERMINAL_DIVISION"); break;
-        case SIMBOLO_TERMINAL_SELECT:
-            strcpy(strTokenSimboloTerminal,"SIMBOLO_TERMINAL_SELECT"); break;
-        case SIMBOLO_TERMINAL_FROM:
-            strcpy(strTokenSimboloTerminal,"SIMBOLO_TERMINAL_FROM"); break;
-        case SIMBOLO_TERMINAL_WHERE:
-            strcpy(strTokenSimboloTerminal,"SIMBOLO_TERMINAL_WHERE"); break;
+        
         case SIMBOLO_TERMINAL_COMA:
             strcpy(strTokenSimboloTerminal,"SIMBOLO_TERMINAL_COMA"); break;
             
@@ -405,10 +400,6 @@ int scanner(const char *strArchivoNombre)
                 {
                     strTokenSimboloEntrada =
                        ObtenerEtiquetaDelSimboloTermina(intCodigoSimboloTerminal);
-                    if(strcmp(strBuffer, "SELECT") == 0){
-                        intCodigoSimboloTerminal = SIMBOLO_TERMINAL_SELECT;
-                        strcpy(strTokenSimboloEntrada, "SIMBOLO_TERMINAL_SELECT");
-                    }
 
                     printf(" \033[0;32m Token Reconocido r[%d] c[%d] [%d]: \033[0;36m [%s] - \033[0;34m  Codigo:[ \033[0m %s\n",
                            intRenglonToken, intColumnaToken,

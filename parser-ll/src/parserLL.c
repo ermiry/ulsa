@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../include/scanner.h"
+#include <string.h>
 
-#define TRUE (-1)
-#define FALSE (0)
+#include "scanner.h"
 
 #define TIPO_SIMBOLO_NO_TERMINAL 1
 #define TIPO_SIMBOLO_TERMINAL 2
@@ -40,11 +39,9 @@
 #define SIMBOLO_NO_TERMINAL_OpLogico                25
 #define SIMBOLO_NO_TERMINAL_OpPon                   26
 #define SIMBOLO_NO_TERMINAL_Numero                  27
-#define SIMBOLO_NO_TERMINAL_InstruccionSelect       28 //Select
-#define SIMBOLO_NO_TERMINAL_InstruccionFrom         29 //From
-#define SIMBOLO_NO_TERMINAL_InstruccionWhere        30 //From
+
 #define SIMBOLO_NO_TERMINAL_InstruccionIDs          31
-#define SIMBOLO_NO_TERMINAL_InstruccionIDs2          32
+#define SIMBOLO_NO_TERMINAL_InstruccionIDs2         32
 
 
 
@@ -287,20 +284,6 @@ case 1: //Regla 1) S → programa InstruccionCompuesta
         case 50: //OpAditivo -> +
             pushT(SIMBOLO_TERMINAL_NUMERO_REAL);
          break;
-         // -> Mis reglas
-        case 51://Instruccion -> InstruccionSelect
-            pushNT(SIMBOLO_NO_TERMINAL_InstruccionSelect);
-        break;
-        case 52: //Instruccion -> Select InstruccionID FROM ID WHERE InstrAsignacion ;
-            pushNT(SIMBOLO_NO_TERMINAL_InstruccionFrom);
-            //TODO: Should put ID or Expresion
-            pushNT(SIMBOLO_NO_TERMINAL_InstruccionIDs);
-            pushT(SIMBOLO_TERMINAL_SELECT);
-        break;
-        case 53: //InstruccionFrom -> From InstruccionIDs InstruccionWhere
-            pushNT(SIMBOLO_NO_TERMINAL_InstruccionWhere);
-            pushNT(SIMBOLO_NO_TERMINAL_InstruccionIDs);
-            pushT(SIMBOLO_TERMINAL_FROM);
 
         break;
         case 54: //InstruccionWhere -> Where Expression ;
@@ -385,13 +368,6 @@ void imprime_regla(int intNumReglaObtenidaDeMR){
         case 56: printf("\033[1;36m 56. InstruccionId2 → , ID InstruccionID2  \n"); break;
         case 57: printf("\033[1;36m 57. InstruccionID2 → epsilon \n"); break;
         
-        //----------------Nuestrar reglas-----------------------
-        // case 9:  printf("\033[1;36m 9.	Insruccion → InstruccionFrom \n");  break;
-        // case 10: printf("\033[1;36m 10. Instruccion → InstruccionWhere\n");  break;
-        // case 12: printf("\033[1;36m 12. Instruccion → InstruccionCompuesta \n"); break;
-        // case 17: printf("\033[1;36m 17. InstruccionSelect → SELECT Termino InstruccionFrom \n"); break;
-        // case 18: printf("\033[1;36m 18. InstruccionFrom → FROM Termino InstruccionWhere\n"); break;
-        // case 19: printf("\033[1;36m 19. InstruccionWhere → WHERE ID = Termino\n"); break;
         default: break ;    
     }
 }
@@ -499,9 +475,7 @@ void imprimeNT(int intSimboloCodigo){
         case SIMBOLO_NO_TERMINAL_OpLogico                : printf("\033[1;36m SIMBOLO_NO_TERMINAL_OpLogico              \n \033[0m"); break;
         case SIMBOLO_NO_TERMINAL_OpPon                   : printf("\033[1;36m SIMBOLO_NO_TERMINAL_OpPon                 \n \033[0m"); break;
         case SIMBOLO_NO_TERMINAL_Numero                  : printf("\033[1;36m SIMBOLO_NO_TERMINAL_Numero                \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_InstruccionSelect       : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionSelect     \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_InstruccionFrom         : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionFrom       \n \033[0m"); break;
-        case SIMBOLO_NO_TERMINAL_InstruccionWhere        : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionWhere      \n \033[0m"); break; 
+       
         case SIMBOLO_NO_TERMINAL_InstruccionIDs          : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionIDs      \n \033[0m"); break;
         case SIMBOLO_NO_TERMINAL_InstruccionIDs2          : printf("\033[1;36m SIMBOLO_NO_TERMINAL_InstruccionIDs2      \n \033[0m"); break;
         default: printf("Error"); break;
